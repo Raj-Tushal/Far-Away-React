@@ -103,7 +103,7 @@ export function Form({ input, setInput, addItem, itemNo, setItemNo }) {
   const valueHandler = (e) => setInput(e.target.value);
 
   return (
-    <div className="h-[12%] max-sm:h-[16%] bg-[#df6b1b] text-[#4c3423] w-full flex justify-center items-center max-sm:text-sm gap-2 max-sm:py-3 max-sm:flex max-sm:flex-col max-sm:gap-y-1">
+    <div className="h-[12%] max-sm:h-[20%] bg-[#df6b1b] text-[#4c3423] w-full flex justify-center items-center max-sm:text-sm gap-2 max-sm:py-3 max-sm:flex max-sm:flex-col max-sm:gap-y-1">
       <p className='font-bold'>What do you need for your 😍 trip?</p>
 
       <select
@@ -118,6 +118,11 @@ export function Form({ input, setInput, addItem, itemNo, setItemNo }) {
         <option value="3">3</option>
         <option value="4">4</option>
         <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
       </select>
 
       <input
@@ -141,7 +146,7 @@ export function Form({ input, setInput, addItem, itemNo, setItemNo }) {
   // PackingList Component
 export function Packinglist({ items, removeHandler, removeAllHandler, sortOption, handleSortChange, togglePackedStatus }) {
   return (
-    <div className="h-[60%] max-sm:h-[80%] bg-[#4c3423] w-full flex flex-col justify-between items-center">
+    <div className="h-[60%] max-sm:h-[62%] bg-[#4c3423] w-full flex flex-col justify-between items-center">
       <div className='w-full flex items-start justify-start gap-x-[7.5rem] flex-wrap pl-[6rem] pr-[0rem] py-10 gap-y-4 text max-sm:flex max-sm:justify-start max-sm:pl-10 '>
         {items.map((item, index) => (
           <Item
@@ -198,7 +203,7 @@ export function Stats({ itemsLength, packedQuantity }) {
   const packedStatus = (packedFraction * 100); // Percentage of packed items
 
   return (
-    <div className="h-[8%] max-sm:h-[10%] bg-[#67c1a3] text-center flex items-center justify-center font-bold max-sm:flex max-sm:flex-col max-sm:py-5 ">
+    <div className="h-[8%] max-sm:h-[8%] bg-[#67c1a3] text-center flex items-center justify-center font-bold max-sm:flex max-sm:flex-col max-sm:py-5 ">
       <img src={briefCase} alt="" className='size-4' />
       <i className='text-[#4c3423] max-sm:text-sm'>
         You have {itemsLength} items on your list, you already packed {packedQuantity} ({packedStatus}%)
